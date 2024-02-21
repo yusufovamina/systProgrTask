@@ -33,6 +33,7 @@ namespace systProgrTask
         }
         public void LaunchProgram() {
             try
+
             {// Configure open file dialog box
                 var dialog = new Microsoft.Win32.OpenFileDialog();
                 dialog.FileName = "Document"; // Default file name
