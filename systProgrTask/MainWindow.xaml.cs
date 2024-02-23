@@ -32,23 +32,11 @@ namespace systProgrTask
             LaunchProgram();
         }
         public void LaunchProgram() {
-            try
-
-            {// Configure open file dialog box
-                var dialog = new Microsoft.Win32.OpenFileDialog();
-                dialog.FileName = "Document"; // Default file name
-                dialog.DefaultExt = ".exe"; // Default file extension
-                dialog.Filter = "Exe Files(.exe) | *.exe | All Files(*.*) | *.* ";
-
-                // Show open file dialog box
-                bool? result = dialog.ShowDialog();
-
-                // Process open file dialog box results
-                if (result == true)
-                {
-                    // Open document
-                    string processName = dialog.FileName;Process.Start(processName);
-                }
+            try { 
+          
+            string progName = ProgramNameTextBox.Text+".exe";
+            Process.Start(progName);
+                
                 
             }
             catch(Exception ex) {
